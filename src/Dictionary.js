@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
+import Definitions from "./Definitions";
 import "./Dictionary.css";
 
 export default function Dictionary() {
   let [word, setWord] = useState("");
+  let [definition, setDefinition] = useState("null");
 
   function handleResponse(response) {
     console.log(response.data);
+    setDefinition(response.data.meanings[0]);
   }
-
   function search(event) {
     event.preventDefault();
     alert(` Searching for the ${word} definition.....`);
@@ -28,6 +30,8 @@ export default function Dictionary() {
       <form onSubmit={search}>
         <input type="search" autoFocus={true} onChange={updateWord} />
       </form>
+
+      <Definitions definition={definition} />
     </div>
   );
 }
