@@ -30,6 +30,8 @@ export default function Dictionary() {
         <input type="search" autoFocus={true} onChange={updateWord} />
       </form>
 
+      {definition && <h2>{word}</h2>}
+
       <Definitions definition={definition} />
     </div>
   );
