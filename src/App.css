@@ -9,6 +9,11 @@ form {
   margin-bottom: 20px;
 }
 
+h2 {
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+
 ul {
   list-style: none;
 }
