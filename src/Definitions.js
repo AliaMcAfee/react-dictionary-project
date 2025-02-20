@@ -1,11 +1,13 @@
 import React from "react";
 import Synonyms from "./Synonyms";
+import Phonetic from "./Phonetic";
 
 export default function Definitions(props) {
   if (props.definition) {
     return (
       <div className="Definitions">
         <ul className="results">
+          <li></li>
           <li>
             <strong>Definition:</strong> {props.definition.definition}
           </li>
@@ -16,7 +18,7 @@ export default function Definitions(props) {
             <strong>Synonyms:</strong>
             <Synonyms synonyms={props.definition.synonyms} />
           </li>
-
+          <Phonetic phonetic={props.definition.phonetic} />
           <li>
             <strong>Example: </strong>
             {props.definition.example}

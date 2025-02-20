@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Definitions from "./Definitions";
+import Phonetic from "./Phonetic";
 import "./Dictionary.css";
 
 export default function Dictionary() {
@@ -9,7 +10,7 @@ export default function Dictionary() {
 
   function handleResponse(response) {
     console.log(response.data);
-    setDefinition(response.data.meanings[0]);
+    setDefinition(response.data.meanings);
   }
   function search(event) {
     event.preventDefault();
