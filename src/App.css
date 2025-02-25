@@ -1,7 +1,10 @@
-footer {
+body {
+  background-color: rgb(184, 167, 145);
+}
+
+h1 {
+  margin-top: 20px;
   text-align: center;
-  margin: 40px;
-  padding: 10px;
 }
 
 form {
@@ -11,20 +14,36 @@ form {
 
 h2 {
   margin-left: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+}
+
+p {
+  margin-left: 15px;
+  margin-bottom: 5px;
 }
 
 ul {
   list-style: none;
 }
 
-li {
-  margin: 8px;
-  padding: 3px;
+em {
+  font-size: 20px;
+  font-weight: bold;
   font-style: italic;
+}
+
+li {
+  margin: 5px;
+  padding: 2px;
   font-weight: 300;
 }
 
 .list {
-  line-height: 1px;
+  line-height: 5px;
+}
+
+footer {
+  text-align: center;
+  margin: 40px;
+  padding: 10px;
 }

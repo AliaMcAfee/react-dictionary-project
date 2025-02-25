@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Definitions from "./Definitions";
-import Phonetic from "./Phonetic";
 import "./Dictionary.css";
 
 export default function Dictionary() {
@@ -10,7 +9,7 @@ export default function Dictionary() {
 
   function handleResponse(response) {
     console.log(response.data);
-    setDefinition(response.data.meanings);
+    setDefinition(response.data);
   }
   function search(event) {
     event.preventDefault();
@@ -27,9 +26,11 @@ export default function Dictionary() {
 
   return (
     <div className="Dictionary">
-      <form onSubmit={search}>
-        <input type="search" autoFocus={true} onChange={updateWord} />
-      </form>
+      <section>
+        <form onSubmit={search}>
+          <input type="search" autoFocus={true} onChange={updateWord} />
+        </form>
+      </section>
 
       {definition && <h2>{word}</h2>}
 
